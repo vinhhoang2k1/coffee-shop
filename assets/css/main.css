@@ -44,7 +44,7 @@ section {
   text-transform: uppercase;
   color: transparent;
   -webkit-text-stroke: 0.05rem var(--main-color);
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   text-align: center;
   pointer-events: none;
   position: relative;
@@ -58,7 +58,6 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
 }
 
 .nav {
@@ -177,14 +176,14 @@ section {
 }
 
 @keyframes aboutImage {
-
-  0%,100% {
-    transform: scale(.9);
+  0%,
+  100% {
+    transform: scale(0.9);
     border-radius: var(--border-radius-hover);
   }
   50% {
-    transform: scale(.8);
-     border-radius: var(--border-radius);
+    transform: scale(0.8);
+    border-radius: var(--border-radius);
   }
 }
 .about__slogan {
@@ -207,14 +206,13 @@ section {
   display: flex;
   justify-content: space-between;
   margin-top: 3rem;
-
 }
 .about__slogan .process-item {
   width: 30%;
   text-align: center;
   padding: 1.5rem;
   border: var(--border);
- border-radius: var(--border-radius);
+  border-radius: var(--border-radius);
 }
 
 .about__slogan .process-item:hover {
@@ -242,7 +240,6 @@ section {
   margin-top: 3rem;
   gap: 1.5rem;
   padding: 2rem;
-
 }
 .menu-item:hover {
   border: var(--border-hover);
@@ -285,7 +282,6 @@ section {
   z-index: 0;
 }
 
-
 .review .review-slider .box .fa-quote-left {
   position: absolute;
   font-size: 6rem;
@@ -308,7 +304,7 @@ section {
   top: -6rem;
 }
 
-.review .review-slider .box:hover .fa-quote-right{
+.review .review-slider .box:hover .fa-quote-right {
   bottom: -6rem;
 }
 
@@ -316,11 +312,11 @@ section {
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
-  margin-bottom: .7rem;
+  margin-bottom: 0.7rem;
 }
 
 .review .review-slider .box .stars {
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 
 .review .review-slider .box .stars i {
@@ -344,7 +340,6 @@ section {
   color: var(--main-color);
 }
 
-
 .swiper-pagination-bullet {
   height: 1.5rem;
   width: 1.5rem;
@@ -352,23 +347,81 @@ section {
 }
 
 .swiper-pagination-bullet-active {
- background-color: var(--main-color);
+  background-color: var(--main-color);
 }
 
+.book {
+  background-image: url(/assets/image/menu-bg.jpg);
+}
 
+.book form {
+  margin: 0rem auto 2rem auto;
+  padding: 3rem;
+  max-width: 60rem;
+  border: var(--border);
+  border-radius: var(--border-radius-hover);
+}
 
+.book .box {
+  width: 100%;
+  text-transform: none;
+  font-size: 1.6rem;
+  background: none;
+  padding: 1rem 1.2rem;
+  border: var(--border);
+  border-radius: 0.5rem;
+  color: var(--main-color);
+  margin: 0.7rem 0;
+}
+.book form .box:focus {
+  border: var(--border-hover);
+}
+.book textarea.box {
+  resize: none;
+  height: 15rem;
+}
+.book form input.btn {
+  background: none;
+}
 
+/* footer */
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+  gap: 1.5rem;
+  transition: 0.1s;
+}
 
+.footer-item h3 {
+  color: var(--main-color);
+  font-size: 2.2rem;
+}
 
+.footer-item i {
+  color: var(--main-color);
+  font-size: 1.4rem;
+  display: block;
+  line-height: 3rem;
+  cursor: pointer;
+}
 
+.footer-item i span {
+  padding-left: 0.5rem;
+  font-weight: 400;
+}
 
+.footer-item i span:hover {
+  padding-left: 1rem;
+}
+#footer .copyright {
+  margin: 2rem;
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--main-color);
+  border-bottom: var(--border-hover);
+}
 
-
-
-
-
-
-@media (min-width :1024px) and (max-width:1200px) {
+@media (min-width: 1024px) and (max-width: 1200px) {
   .about__slogan {
     margin-top: 7%;
   }
@@ -377,7 +430,7 @@ section {
   section {
     padding: 2rem 5%;
   }
-  
+
   .header,
   #home {
     padding: 2rem 2rem;
@@ -421,7 +474,7 @@ section {
     right: 0;
     position: absolute;
     background-color: #fff;
-    transition: .5s linear;
+    transition: 0.3s linear;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
   .header .navbar.active {
@@ -455,8 +508,11 @@ section {
   .about__slogan {
     margin-top: 5%;
   }
+  .footer-item {
+    margin-left: 4%;
+  }
 }
-@media (max-width :450px) {
+@media (max-width: 450px) {
   .heading {
     font-size: 5.5rem;
   }
@@ -471,7 +527,12 @@ section {
   }
   .menu-item__icon {
     margin-left: 6rem;
-   margin-top: -6rem;
+    margin-top: -6rem;
   }
- 
+  #home .image img {
+    margin-left: 4.8rem;  
+  }
+  #home .image-slide {
+    margin-left: 4%;
+  }
 }

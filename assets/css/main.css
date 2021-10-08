@@ -94,6 +94,10 @@ section {
   font-size: 1.6rem;
   margin-right: 2.5rem;
 }
+
+.header .navbar .navbar-link.active {
+font-weight: 600;
+}
 .header .order {
 }
 .order .btn {
@@ -488,6 +492,8 @@ section {
     margin: 0;
     padding: 1rem 2rem;
   }
+
+  
   #home {
     padding: 2rem 0rem;
   }

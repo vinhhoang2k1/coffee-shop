@@ -1,6 +1,15 @@
 let menu = document.querySelector("#menu-btn");
 let navbar = document.querySelector(".navbar");
+let navLink = navbar.querySelectorAll('.navbar-link')
+// console.log(navLink);
 
+Array.from(navLink).forEach((item) => {
+    item.onclick = () => {
+        let curren = document.querySelector('.navbar-link.active');
+        curren.classList.remove('active');
+        item.classList.add('active');
+    }
+})
 
 menu.onclick = () => {
     menu.classList.toggle('fa-times');
@@ -36,8 +45,8 @@ var swiper = new Swiper(".review-slider", {
             slidesPerView: 2,
 
         },
-        loop : true,
-        grabCursor : true,
+        loop: true,
+        grabCursor: true,
 
     },
 });

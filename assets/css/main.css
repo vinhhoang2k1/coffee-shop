@@ -467,6 +467,7 @@ section {
   }
   #menu-btn.fa-times {
     font-size: 3rem;
+    transform: rotate(180deg);
   }
   .header .navbar {
     top: 99%;
